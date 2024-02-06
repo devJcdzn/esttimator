@@ -10,14 +10,17 @@ const profitVal = document.getElementById("profitVal");
 const debitVal = document.getElementById("debitVal");
 const extract = document.getElementById("extract");
 
-const sheetButton = document.getElementById('linkToSheet');
+const sheetButton = document.getElementById("linkToSheet");
 
 async function getMetadata() {
   const response = await fetch(url + "metadata");
   const data = await response.json();
 
   const { title } = data.properties;
+  const { spreadsheetUrl } = data;
+
   localStorage.setItem("title", title);
+  localStorage.setItem("spreadURL", spreadsheetUrl);
 }
 
 getMetadata();
@@ -116,9 +119,9 @@ async function renderHistory() {
   }
 }
 
-// sheetButton.addEventListener('click', () => {
-//   window.location.href = localStorage.getItem("url");
-// })
+sheetButton.addEventListener('click', () => {
+  window.location.href = localStorage.getItem("spreadURL");
+})
 
 window.addEventListener("load", loadHeader);
 window.addEventListener("load", loadResume);
