@@ -1,0 +1,26 @@
+{
+    "name": "Estimator",
+    "short_name": "Estimator",
+    "start_url": ".",
+    "background_color": "#23272a",
+    "theme_color": "#23272a",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "assets/ic_launcher.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/ic_launcher.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "assets/playstore.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

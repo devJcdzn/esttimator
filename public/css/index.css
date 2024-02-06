@@ -1,0 +1,419 @@
+.header-content {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--burple);
+}
+
+.header-logo a {
+    color: var(--white);
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    padding: 2rem 1rem;
+}
+
+.resume-budget {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    padding: 1.875rem;
+    border-radius: 4px;
+    transition: all .3s ease;
+}
+
+.resume-budget .top-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.375rem;
+}
+
+.top-content .content-title {
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 600;
+    text-transform: capitalize;
+    opacity: .8;
+}
+
+.top-content .download {
+    background: transparent;
+    color: var(--black);
+    font-size: 14px;
+}
+
+.bottom-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+} 
+
+.bottom-content .value-resume {
+    color: var(--black);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.value-resume.positive {
+    color: var(--green);
+}
+.value-resume.negative {
+    color: var(--fuchia);
+}
+
+.resume-budget > ion-icon {
+    position: absolute;
+    font-size: 120px;
+    opacity: .2;
+    right: -5%;
+    top: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+}
+
+.download-resume {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--burple);
+    padding: .6rem;
+    color: var(--white);
+    font-size: 20px;
+    top: 0;
+    right: 0;
+    border-radius: 0 4px 0 10px;
+}
+
+.download-resume:disabled {
+    opacity: 0;
+    cursor: not-allowed;
+}
+
+.debit-bars {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    padding: 1rem 1.875rem;
+    background: var(--white);
+}
+
+.debit-bars .title-bar {
+    font-size: 18px;
+    margin-bottom: 1.875rem;
+}
+
+.debit-bars .graph {
+    width: 100%;
+    height: 10vh;
+    max-height: 200px;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--black);
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+
+.bar > .value {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 700;
+    opacity: .3;
+}
+
+.graph .profit {
+    width: 33%;
+    height: 100%;
+    background: var(--green);
+}
+
+.compare {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.graph .debit {
+    width: 33%;
+    height: 50%;
+    background: var(--fuchia);
+}
+
+.extract {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background: var(--white);
+    padding: 1.875rem;
+    border-radius: 10px;
+    min-height: 25vh;
+}
+
+.extract .extract-header {
+    font-size: 12px;
+    margin-bottom: 1.275rem;
+}
+
+.extract .extract-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.extract-main .movimentation {
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: .4rem;
+}
+
+.extract-main span {
+    text-align: center;
+}
+
+.movimentation .date {
+    width: 30%;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.movimentation .reason {
+    width: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movimentation .total {
+    width: 30%;
+    font-weight: 600;
+}
+
+.movimentation .total.entrada {
+    color: var(--green);
+}
+.movimentation .total.saida {
+    color: var(--fuchia);
+}
+
+.show-details {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--burple);
+    padding: .6rem;
+    color: var(--white);
+    font-size: 20px;
+    top: 0;
+    right: 0;
+    border-radius: 0 4px 0 10px;
+}
+
+.create-action {
+    position: fixed;
+    bottom: .8rem;
+    right: .8rem;
+    padding: .8rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: var(--white);
+    background: var(--burple);
+    z-index: 1;
+}
+
+/* MODAL */
+.add-modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #000000ad;
+    top: 0;
+    z-index: 999;
+    transition: all .3s ease;
+}
+
+.add-modal.active {
+    display: flex;
+}
+
+.modal {
+    position: relative;
+    width: 80%;
+    height: 60%;
+    background: var(--black);
+    padding: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal .modal-title {
+    color: var(--white);
+    font-size: 18px;
+    margin-bottom: 1.875rem;
+}
+
+.modal .modal-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--white);
+}
+
+.modal-form .radio {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-form .radio label {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.profit-m {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+.profit-m label {
+    color: var(--green);
+}
+.debit-m {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+.debit-m label {
+    color: var(--fuchia);
+}
+
+.close-modal {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--burple);
+    padding: .4rem;
+    color: var(--white);
+    font-size: 18px;
+    top: 0;
+    right: 0;
+    border-radius: 0 4px 0 10px;
+}
+
+.content-m {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.input label {
+    font-size: 12px;
+}
+
+.input input {
+    font-size: 14px;
+    font-family: inherit;
+    width: 100%;
+    border-bottom: 1px solid var(--burple);
+    background: transparent;
+    color: var(--white);
+    padding: .2rem;
+    margin-bottom: .4rem;
+}
+
+.submit-modal {
+    margin-top: 2rem;
+    padding: .2rem;
+    border-radius: 4px;
+    background: var(--burple);
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.submit-modal:disabled {
+    opacity: .6;
+}
+
+/* Toast */
+
+.toast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    position: fixed;
+    left: -50%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+    width: 90%;
+    padding: .8rem;
+    border-radius: 10px;
+    background: var(--green);
+    transition: all .3s ease;
+}
+
+.toast .check-icon {
+    height: 100%;
+    display: flex;
+    margin-left: 1.2rem;
+    font-size: 24px;
+    color: var(--black);
+}
+
+.toast .toast-message {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-transform: capitalize;
+    font-size: 14px;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#23272a">
+    <title>Management</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="./public/css/index.css" />
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    <link rel="apple-touch-icon" href="./assets/ic_launcher.png">
+  </head>
+  <body>
+    <button class="create-action">
+      <ion-icon name="add-outline"></ion-icon>
+    </button>
+
+    <header class="header-content">
+      <div class="header-logo">
+        <a href="/" id="projectName"></a>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <section class="resume-budget">
+        <div class="top-content">
+          <span class="content-title">Resumo geral</span>
+        </div>
+        <div class="bottom-content">
+          <span class="value-resume positive" id="valueResume">R$0,00</span>
+        </div>
+        <ion-icon name="stats-chart"></ion-icon>
+        <button class="download-resume">
+          <ion-icon name="cloud-download-outline"></ion-icon>
+        </button>
+      </section>
+
+      <section class="debit-bars">
+        <h2 class="title-bar" id="titleBar">R$0,00</h2>
+        <div class="graph">
+          <div class="bar profit" id="profitBar">
+            <span class="value" id="profitVal">R$0,00</span>
+          </div>
+          <div class="compare">
+            <span class="compare-icon">
+              <ion-icon name="close-outline"></ion-icon>
+            </span>
+          </div>
+          <div class="bar debit" id="debitBar">
+            <span class="value" id="debitVal">R$0,00</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="extract">
+        <button class="show-details" id="linkToSheet">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </button>
+        <div class="extract-header">
+          <h2 class="extract-title">Últimas movimentações</h2>
+        </div>
+        <div class="extract-main" id="extract">
+        </div>
+      </section>
+    </main>
+
+    <section class="add-modal">
+      <div class="modal">
+        <button class="close-modal">
+            <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <span class="modal-title"> Adicionar movimentação </span>
+        <form action="" id="modalForm" class="modal-form" method="post">
+          <div class="radio">
+            <div class="profit-m">
+                <input type="radio" name="type" id="profit" value="profit" />
+                <label for="profit">Entrada</label>
+            </div>
+            <div class="debit-m">
+                <input type="radio" name="type" id="debit" value="debit" />
+                <label for="debit">Saída</label>
+            </div>
+          </div>
+
+          <div class="content-m">
+            <div class="owner-m input">
+              <label for="owner">Nome</label>
+              <input type="text" id="owner" />
+            </div>
+            <div class="reason-m input">
+              <label for="reason">Descrição</label>
+              <input type="text" id="reason" />
+            </div>
+            <div class="value-m input">
+              <label for="value">Valor</label>
+              <input type="text" id="value" />
+            </div>
+          </div>
+
+          <button type="submit" class="submit-modal" id="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./public/js/index.js"></script>
+    <script src="./public/js/render.js"></script>
+  </body>
+</html>
